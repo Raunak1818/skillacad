@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        /* div{
+            width: 400px;
+            height: 500px;
+            background-color:aqua;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+
+
+        .main1{
+            border: 1px solid black;
+            display: flex;
+            /* flex-direction: row-reverse; */
+            height: 300px;
+            /* align-items:flex-end; */
+            justify-content: space-between;
+            gap: 20px;
+
+
+        }
+        .main2{
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+            height: 300px;
+        }
+
+
+        .main1>div{
+            background-color: blue;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Display Flex in CSS</h1>
+    <!-- <div>this is div</div> -->
+
+
+    <div class="main1">
+     <div class="div1">this is div1</div>
+     <div class="div2">this is div2</div>
+     <div class="div3">this is div3</div>
+    </div>
+
+
+    <br><br>
+
+    <div class="main2">
+        <span class="div1">this is div1</span>
+        <span class="div2">this is div2</span>
+        <span class="div3">this is div3</span>
+    </div>
+ 
+     
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .image_container{
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        .image_container img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            border-radius: 50%;
+            animation: rotateing 4s linear infinite;
+        }
+        @keyframes rotateing {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image_container">
+        <img src="https://i.pinimg.com/originals/b6/18/4a/b6184a1289bbd01c2cb93dd70610d6b6.jpg" alt="">
+    </div>
+</body>
+</html>

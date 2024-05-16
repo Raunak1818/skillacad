@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            /* margin: 30px; */
+        }
+        #Demo1{
+            width: 170px;
+            height: 170px;
+            background-color: rgb(83, 203, 83);
+            /* margin: 30px; */
+            padding: 20px;
+            margin: 60px;
+        }
+        
+        p{
+             width: 170px;
+            height: 170px;
+            background-color: lightblue;
+            /* margin: 30px; */
+        }
+        /* #child1,#child2 {
+            background-color: yellow;
+        } */
+        #child1{
+            background-color: yellow;
+        }
+        #child2{
+            background-color: rgb(1, 85, 1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Margin in class</h1>
+    <div class="container">
+        <div id="Demo1">
+            <div id="child1">child1</div>
+            <div id="child2">child2</div>
+        </div>
+        <p id="Demo2"></p>
+    </div>
+</body>
+</html>

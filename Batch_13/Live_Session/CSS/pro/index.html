@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .header{
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
+        border: 10px;
+        padding: 10px;
+    
+        height: 50px;
+        
+        font-size: 800;
+        
+        position: fixed
+       }
+       .product-cart{
+        display: flex;
+        flex-direction: row;
+        border: 2px red solid;
+        gap: 30px;
+        background-color: blue;
+        width: 230px;
+        height: 300px;
+        margin-bottom: 60px;
+       }
+       .product-buttom{
+        color: rgb(191, 187, 187);
+        background-color: black;
+        width: 600px;
+        height: 4px;
+        padding-bottom: 4px;
+        border-radius: 5px;
+        
+       }
+       
+
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class="head">E-commerce</div>
+    <div class="anc">
+        <a href="#">home</a>
+        <a href="#">product</a>
+        <a href="#">career</a>
+        <a href="#">gallry</a>
+        <a href="#">contact </a>
+
+    </div>
+</div>
+<div class="product-cart">
+       <div class="product">
+        <div class="product-title">product 1</div>
+        <img class="product-img" src="https://bellavitaorganic.com/cdn/shop/files/DayToNightCombo_1.jpg?v=1694079712&width=360" alt="" height="230px" >
+        <div class="product-price">$2.99</div>
+        <buttom class="product-buttom">add to cart</buttom>
+       </div>
+    </div>
+    
+    
+    <div class="product-cart">
+    <div class="product">
+     <div class="product-title">product 2</div>
+     <img class="product-img" src="https://cdn.shopify.com/s/files/1/2426/3837/products/homedecor2040172302_3990x.jpg?v=1516582330" alt="" height="230x" >
+     <div class="product-price">$10.99</div>
+     <buttom class="product-buttom">add to cart</buttom>
+
+    </div>
+    </div>
+
+    <div class="product-cart">
+    <div class="product">
+     <div class="product-title">product 3</div>
+     <img class="product-img" src="https://bellavitaorganic.com/cdn/shop/files/RcbLimitedEditionPerfumeGiftBox_1.jpg?v=1693996065&width=360" alt="" height="230" >
+     <div class="product-price">$5.99</div>
+     <buttom class="product-buttom">add to cart</buttom>
+
+
+    </div>
+</div>
+
+</body>
+</html>

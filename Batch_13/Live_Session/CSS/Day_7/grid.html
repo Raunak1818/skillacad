@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+        }
+        .item{
+            background-color: yellow;
+            border: 3px solid black;
+            padding: 12px 23px;
+        }
+        #navbar{
+            grid-area:navbar ;
+        }
+        #section{
+            grid-area:section ;
+        }
+        #aside{
+            grid-area:aside ;
+        }
+        #footer{
+            grid-area:footer ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="navbar">
+           Home About Section
+        </div>
+        <div class="item" id="section">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ullam tenetur explicabo neque inventore amet accusantium iusto voluptatibus architecto. Optio quis unde aut excepturi iusto nostrum recusandae eligendi ullam dolore!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam delectus doloribus perferendis minima nemo sit! Aliquid iure modi dolorum incidunt adipisci! Quasi sint similique voluptatum, maiores neque temporibus sapiente quam!
+        </div>
+         <div class="item" id="aside">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ullam tenetur explicabo neque inventore amet accusantium iusto voluptatibus architecto. Optio quis unde aut excepturi iusto nostrum recusandae eligendi ullam dolore!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam delectus doloribus perferendis minima nemo sit! Aliquid iure modi dolorum incidunt adipisci! Quasi sint similique voluptatum, maiores neque temporibus sapiente quam!
+        </div>
+        <div class="item" id="footer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ullam tenetur explicabo neque inventore amet accusantium iusto voluptatibus architecto. Optio quis unde aut excepturi iusto nostrum recusandae eligendi ullam dolore!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam delectus doloribus perferendis minima nemo sit! Aliquid iure modi dolorum incidunt adipisci! Quasi sint similique voluptatum, maiores neque temporibus sapiente quam!
+        </div>
+    </div>
+</body>
+</html>

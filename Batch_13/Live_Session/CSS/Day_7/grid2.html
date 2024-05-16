@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: grid;
+            width: 75%;
+            margin: 50px auto ;
+            grid-template-columns: repeat(3,1fr)150px 100px;
+            grid-template-rows:60px 100px 280px 60px;
+            border: 1px solid gray;
+
+        }
+        .div1{background-color: aqua;
+grid-column:1/-1 ;
+        
+        }
+        .div2{background-color: blue;grid-column: 1/2;}
+        .div3{background-color: rgb(226, 76, 43);grid-column: 2/3;}
+        .div4{background-color: rgb(226, 162, 43);grid-column: 3/5;}
+        .div5{background-color: rgb(43, 64, 226);grid-row: 2/4;grid-column: 5/6;}
+        .div6{background-color: rgb(226, 43, 162);grid-column: 1/5;}
+        .div7{background-color: rgb(226, 43, 58);grid-column: 1/-1;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="div1">Header</div>
+        <div class="div2">section1</div>
+        <div class="div3">section2</div>
+        <div class="div4">section3</div>
+        <div class="div5">sidebar</div>
+        <div class="div6">mainBar</div>
+        <div class="div7">footer</div>
+    </main>
+</body>
+</html>

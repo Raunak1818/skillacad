@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+        }
+        .container:hover .box{
+            width: 400px;
+        }
+        .box{
+            height: 120px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: width 4s;
+        }
+        
+        .one{
+            background-color: aqua;
+            transition-timing-function: ease;
+        }
+        .two{
+            background-color: yellowgreen;
+            transition-timing-function: ease-in;
+        }
+        .third{
+            background-color: blue;
+            transition-timing-function: ease-out;
+        }
+        .fourth{
+            background-color: chocolate;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box one">Home</div>
+        <div class="box two">About</div>
+        <div class="box third">Contact</div>
+        <div class="box fourth">Gallery</div>
+
+    </div>
+</body>
+</html>

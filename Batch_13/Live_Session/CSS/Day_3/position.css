@@ -1,0 +1,13 @@
+div{
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+.box3{
+    border: 1px solid green;
+    position: relative;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
