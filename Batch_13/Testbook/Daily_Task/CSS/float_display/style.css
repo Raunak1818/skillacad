@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+.container{
+    width:80% ;
+    margin: 30px auto;
+    background-color: rgb(250,250,250);
+    border: solid 2px #ccc;
+    padding: 10px;
+}
+.container >h1{
+    background-color:rgb(137, 255, 245) ;
+    padding:20px 10px;
+    text-align: center;
+    color: rgb(13, 13, 185);
+}
+.container >img{
+    width:200px ;
+    height: 200px;
+    margin: 20px 15px 10px 0px;
+    background-color: rgb(180, 180, 180);
+    padding: 10px;
+    float: left;
+    /* float: right; */
+}
+.container >.text{
+    color: dark rgb(104, 184, 104);
+    margin: 20px 10px;
+    text-align:justify ;
+}
+.clear{
+    clear: left;
+}

@@ -1,0 +1,21 @@
+:root{
+    --bg-color:#111;
+    --text-color:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    
+    
+}
+h1,h2,ul,li,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    scroll-behavior: smooth;
+    color: var(--text-color);
+}

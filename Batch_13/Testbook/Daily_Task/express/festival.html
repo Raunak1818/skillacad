@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> 
+<ul id="festivallist"></ul>
+    </div>
+    
+
+    <script>
+        const festivallist=document.getElementById('festivallist');
+        const fetchfestival=async()=>{
+            const response=await fetch('http://localhost:3300/festivals');
+        const festivals=await response.json();
+        console.log(festivals);
+        festivallist.forEach((festival)=>{
+            const li= document.createElement('li');
+            li.innerHTML=`
+            <div class="li_festival">
+                
+                <p>${festival.name}</P>
+                    <p>${festival.description}</P>
+                </div>
+            `
+        })
+        }
+    
+
+
+    </script>
+</body>
+</html>

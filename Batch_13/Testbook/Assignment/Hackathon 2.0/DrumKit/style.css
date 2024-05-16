@@ -1,0 +1,90 @@
+body {
+    text-align: center;
+    background-color: #283149;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    color: #DBEDF3;
+    font-family: "Arvo", cursive;
+    text-shadow: 3px 4px #ce0c63;
+  
+  }
+  
+  footer {
+    color: #DBEDF3;
+    font-family: sans-serif;
+  }
+  
+  .w{
+  
+    background-image: url("img-png1.png");
+  }
+  
+  .a {
+    
+   
+    background-image: url("img-png2.png");
+  }
+  
+  .s {
+   
+    background-image: url("img-png3.png");
+  }
+  
+  .d {
+   
+    background-image: url("img-png4.png");
+  }
+  
+  .j {
+   
+    background-image: url("img-png5.png");
+  }
+  
+  .k {
+   
+    background-image: url("img-png6.png");
+  }
+  
+  .l {
+   
+    background-image: url("img-png7.png");
+  }
+  
+  .set {
+    margin: 10% auto;
+  }
+  
+  .game-over {
+    background-color: red;
+    opacity: 0.8;
+  }
+  
+  .pressed {
+    box-shadow: 0 3px 4px 0 #DBEDF3;
+    opacity: 0.5;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .button {
+    outline: none;
+    border: 10px solid #4c5877;
+    font-size: 5rem;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
+    color: #cd035e;
+    text-shadow: 3px 0 #b5dae8;
+    border-radius: 15px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+  }
+  

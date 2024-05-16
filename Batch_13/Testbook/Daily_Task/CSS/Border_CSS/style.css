@@ -1,0 +1,59 @@
+h1{
+    color: blue;
+}
+p{
+    border-style: solid;
+   /*  border-style: dotted;
+    border-style: dashed;
+    border-style: double;   */
+    border-top-style: dashed;
+    border-bottom-style: dotted;
+    border-right-style: double;
+    /*  border-style: top right bottom left  */
+    border-style: solid dotted dashed none;
+
+    /* border-style: top-bootom  left-right; only for 2 value */
+    border-style: double dotted;
+
+    border-width: thick;
+    border-width: medium;
+    border-width: thin;
+    border-width: 20px;
+    border-width: 5px;
+
+    border-color: rgb(16, 215, 16);
+    border-bottom-color: rgb(230, 230, 5);
+
+}
+
+    a {  
+        /* border-style: solid;*/
+         padding: 4px 10px ;
+       /* border-color: blueviolet;*/
+       /* border-width: 2px;   */
+       /* width: 50px;    */
+
+       /* border: style width color;   */
+       border: solid 2px orange;
+       border-radius: 10px;
+       color: red;
+
+       border-top-left-radius: 20px;
+       border-bottom-right-radius:20px;
+
+    }
+    a :hover{
+        color: #0b8d25;
+        background-color: pink;
+        
+    }
+    table,td,tr,th {
+        border: solid 2px greenyellow;
+        border-collapse: collapse;
+    }
+    th{
+        background-color: pink;
+    }
+    td{
+        background-color: blueviolet;
+    }

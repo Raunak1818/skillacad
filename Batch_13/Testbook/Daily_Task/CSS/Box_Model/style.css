@@ -1,0 +1,24 @@
+*{
+    background-color: rgb(235, 232, 232);
+}
+.heading{
+    background-color: blue;
+    color: white;
+    border: solid 4px #111;
+    margin: 40px;
+    padding: 20px;
+    /* padding-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 70px; */
+    padding: 40px 60px;
+    /* margin-top: 60px; */
+}
+p{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-align: justify;
+    margin: 10px;
+    /* max-width: 50px; */
+    max-height: 70px !important;
+    overflow: auto;
+}

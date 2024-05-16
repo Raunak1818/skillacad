@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    background-color: rgb(214, 245, 255);
+}
+
+
+/* 
+positioning in html element
+
+position 
+statics
+relative
+absolute
+fixed
+sticky
+
+z-index
+
+
+*/
+
+
+.item1{
+    width: 200px;
+    height: 200px;
+    background: rgb(94, 94, 232);
+    margin: 40px 0px 0px 40px ;
+    /* position: static; */
+}
+
+.item1 > div{
+    width: 200px;
+    height: 200px;
+    background: rgb(232, 177, 94);
+    margin: 40px 0px 0px 0px ;
+    /* position: static; */
+    position: relative;
+    /* top: 20px;
+    left: 30px; */
+    right: 40px;
+    bottom: 30px;
+}
+
+
+
+
+.item2{
+    width: 200px;
+    height: 200px;
+    background: rgb(94, 232, 122);
+    margin: 40px 0px 0px 40px ;
+    /* position: static; */
+    position: absolute;
+}
+
+.item2 > div{
+    width: 50px;
+    height: 50px;
+    background: #f70404;
+
+    /* 
+    1.position absolute direct
+       it will ingnore html element and position itself
+       with the body
+    
+    
+    */
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+
+
+.item3{
+        width: 200px;
+        height: 200px;
+        background: rgb(186, 232, 94);
+        margin: 50px 10px;
+        position: fixed;
+        top: 0px;
+
+}
+
+
+.item4{
+        width: 200px;
+        height: 200px;
+        margin: 50px 10px ;
+        background: rgb(232, 94, 202);
+        position: sticky;
+        top: 20px;
+        
+}

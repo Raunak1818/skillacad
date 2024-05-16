@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Homepage -->
+<div id="homePage">
+  <!-- User Details Section -->
+  <div id="userDetailsSection">
+    <img src="Its-Quiz-Time-Logo.logo.webp" alt="Logo" height="100px" width="100px">
+    <p>Welcome to the Quiz App</p>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <button onclick="startQuiz()">Enter</button>
+  </div>
+
+  <!-- Category Section -->
+  <div id="categorySection">
+    <button onclick="startQuiz('Pipes and Cisterns')">Pipes and Cisterns</button>
+    <button onclick="startQuiz('Probability')">Probability</button>
+    <button onclick="startQuiz('Problems on Age')">Problems on Age</button>
+    <button onclick="startQuiz('Profit and Loss')">Profit and Loss</button>
+  </div>
+</div>
+
+<!-- Quiz Page -->
+<div id="quizPage" style="display: none;">
+  <div id="timer">Timer: <span id="timerValue">60</span></div>
+  <div id="score">Score: <span id="scoreValue">0</span></div>
+  <div id="questionNumber">Question 1</div>
+  <div id="question">Loading question...</div>
+  <button onclick="nextQuestion()">Next Question</button>
+</div>
+
+<!-- Quiz Result Page -->
+<div id="resultPage" style="display: none;">
+  <p>Name: <span id="participantName"></span></p>
+  <p>Total time taken: <span id="totalTime"></span></p>
+  <p>Total Questions: <span id="totalQuestions"></span></p>
+  <p>Attempted: <span id="attemptedQuestions"></span></p>
+  <p>Correct Answers: <span id="correctQuestions"></span></p>
+  <p>Wrong Answers: <span id="wrongQuestions"></span></p>
+  <p>Score: <span id="percentageScore"></span>%</p>
+  <button onclick="startQuiz()">Start Again</button>
+  <button onclick="goToHome()">Go to Home</button>
+</div>
+
+<script>
+  const questions = [
+    {
+      category: 'Pipes and Cisterns',
+      question: 'Sample question 1?',
+      options: ['Option A', 'Option B', 'Option C', 'Option D'],
+      correctAnswer: 0,
+    },
+    // Add more questions for each category
+  ];
+
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let timer;
+
+  function startQuiz(category) {
+    // Setup the quiz for the selected category
+    // For simplicity, let's assume all categories have the same questions
+    currentQuestionIndex = 0;
+    score = 0;
+    showQuizPage();
+    showNextQuestion();
+    startTimer();
+  }
+
+  function showQuizPage() {
+    document.getElementById('homePage').style.display = 'none';
+    document.getElementById('quizPage').style.display = 'block';
+  }
+
+  function showNextQuestion() {
+    if (currentQuestionIndex < questions.length) {
+      const currentQuestion = questions[currentQuestionIndex];
+      document.getElementById('questionNumber').innerText = `Question ${currentQuestionIndex + 1}`;
+      document.getElementById('question').innerText = currentQuestion.question;
+
+      const optionsContainer = document.getElementById('optionsContainer');
+      optionsContainer.innerHTML = '';
+
+      currentQuestion.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.onclick = () => checkAnswer(index, currentQuestion.correctAnswer);
+        optionsContainer.appendChild(button);
+      });
+    } else {
+      showResultPage();
+    }
+  }
+
+  function checkAnswer(userAnswer, correctAnswer) {
+    if (userAnswer === correctAnswer) {
+      score++;
+    }
+    currentQuestionIndex++;
+    showNextQuestion();
+  }
+
+  function startTimer() {
+    let timeLeft = 60;
+    timer = setInterval(() => {
+      document.getElementById('timerValue').innerText = timeLeft;
+      timeLeft--;
+      if (timeLeft < 0) {
+        clearInterval(timer);
+        showResultPage();
+      }
+    }, 1000);
+  }
+
+  function showResultPage() {
+    clearInterval(timer);
+    document.getElementById('quizPage').style.display = 'none';
+    document.getElementById('resultPage').style.display = 'block';
+
+    // Display result information (participant name, total time, total questions, etc.)
+  }
+
+  function goToHome() {
+    document.getElementById('resultPage').style.display = 'none';
+    document.getElementById('homePage').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

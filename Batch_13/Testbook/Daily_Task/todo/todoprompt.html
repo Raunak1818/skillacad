@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tak Manager</h1>
+        <button onclick="addTask()">Add a task</button>
+    </div>
+    <ul id="taskList">
+
+    </ul>
+    <script>
+        let task = [];
+        function addTask() {
+            let taskInput = prompt('Enter a new task');
+            if (taskInput !== '') {
+                task.push(taskInput);
+            }
+            else { 'Please enter the task' }
+            taskDisplay();
+        }
+        function taskDisplay() {
+            let taskList=document.getElementById('taskList');
+            taskList.innerHTML="";
+            for(i=0 ;i<task.length;i++){
+                const taskItem=document.createElement("li");
+                taskItem.textContent=task[i];
+                taskList.appendChild(taskItem);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

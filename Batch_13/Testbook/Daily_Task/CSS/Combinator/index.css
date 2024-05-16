@@ -1,0 +1,18 @@
+/* Container */
+/* space,+ ,~, >*/
+
+
+
+.container p{
+color: yellow;
+}
+
+.insidecontainer>p{
+    color: pink;
+}
+.insidecontainer~p{
+color: blue;
+}
+.insidecontainer+p{
+    color: rgb(255, 145, 0);
+    }

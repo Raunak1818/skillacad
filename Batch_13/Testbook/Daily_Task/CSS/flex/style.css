@@ -1,0 +1,25 @@
+.container{
+    background-color: rgb(114, 126, 137);
+    padding: 11px;
+    display: flex;
+    /* flex-direction:row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: nowrap; */
+    flex-wrap:wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* flex-flow: row wrap-reverse ; */
+    flex-flow: column wrap-reverse;
+    justify-content:space-between ;
+    /* align-items:center ; */
+
+}
+.item{
+    background-color: black;
+    color: antiquewhite;
+    padding: 10px 15px;
+    margin: 10px ;
+    height:100px ;
+    width: 100px;
+}
