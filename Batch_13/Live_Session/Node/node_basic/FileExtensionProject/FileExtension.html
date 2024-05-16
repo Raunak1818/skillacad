@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>upload a file</h1>
+        <form action="/uploads/" method="post" enctype="multipart/form-data">
+            <input type="text" placeholder="enter usernae">
+            <input type="file" name="file" id="file"><br>
+            <button type="submit">upload</button>
+        </form>
+   <div id="message"></div>
+
+   <script>
+    const form=document.querySelector('form');
+    const message=document.getElementById('message');
+    form.addEventListener('submit',async(event)=>{
+        const formData=new FormData(form);
+        const response=await fetch('/upload',{
+            method:'post',
+            body:formData
+        })
+        const data=await response.text();
+        message.innerHTML=data;
+    })
+   </script>
+</body>
+</html>
