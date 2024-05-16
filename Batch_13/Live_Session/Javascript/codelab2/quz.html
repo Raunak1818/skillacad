@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+
+    <style>
+        div {
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>What is the capital of France?</h1>
+
+    <div class="answers">
+        <button class="btn" data-correct="true">Paris</button>
+        <button class="btn">Rome</button>
+        <button class="btn">Berlin</button>
+        <button class="btn">London</button>
+    </div>
+
+    <h4 id="displayanswer" style="text-align: center;"></h4>
+
+    <script>
+        const buttons = document.querySelectorAll('.btn');
+        
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.getAttribute('data-correct')) {
+                    btn.style.backgroundColor = 'green';
+                    btn.style.color = 'white';
+                    document.getElementById('displayanswer').innerHTML = 'Answer is correct';
+                } else {
+                    btn.style.backgroundColor = 'red';
+                    btn.style.color = 'white';
+                    document.getElementById('displayanswer').innerHTML = 'Answer is wrong';
+                }
+
+                buttons.forEach(disableBtn => {
+                    disableBtn.disabled = true;
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

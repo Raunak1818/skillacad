@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>User Input in JS</h1>
+    <form id="userForm">
+        <label for="nameIpnut">Enter Name</label>
+        <input type="text" id="name Input" required>
+        <!-- <button onclick="details()">submit</button> -->
+        <button>submit</button>
+    </form>
+<script>
+    function details(e){
+        e.preventdefault();
+        let nameInput=document.getElementById('nameInput').value;
+        console.log(nameInput);
+    }
+     document.getElementById('userForm').addEventListener('submit',details)
+</script>
+</body>
+
+</html>

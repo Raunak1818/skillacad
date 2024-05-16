@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Classes in HTML</h1>
+<body>
+    <script>
+          //basic example
+        //     class Studentinfo{
+        //         name='peter';
+        //         uid=89;
+        //     }
+        // let s=new Studentinfo();
+        //     console.log(s.uid);
+        
+
+
+        //example-2
+        class Studentinfo {
+            constructor() {
+                this.name = 'peter';
+                this.uid = 89;
+                console.log(this);
+            }
+        }
+        let s = new Studentinfo();
+        console.log(s.uid);
+
+
+
+        // example 3
+        let studentsDetail={
+            name:'Peter',
+            uid:48,
+            designation:'Spider Man'
+        }
+        console.log(studentsDetail);
+        document.getElementById('detail').innerHTML=studentsDetail.designation;
+    </script>
+</body>
+</html>

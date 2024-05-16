@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Events in js</h1>
+    <p id="eventsdemo"></p>
+
+    <!-- <button id="btn" onclick="showContent()">show Content</button> -->
+    <!-- <button id="btnevent">show Content</button> -->
+
+    <!-- toggle buttom in ex-5 -->
+    <!-- <p id="para1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad reprehenderit placeat deleniti,
+        nisi nihil laborum quo! Excepturi eius sapiente, cumque hic quis natus consectetur quo at. Voluptatum, vel
+        corrupti.</p>
+    <p id="para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit harum dolorem eos dolores
+        error temporibus aliquam natus asperiores quasi recusandae deleniti, eligendi blanditiis tempora iste voluptatem
+        officia qui esse maxime?</p>
+    <button id="readMore">Read More</button> -->
+
+    <!-- MouseOver example method-6 -->
+    <!-- <p id="para1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus ad reprehenderit placeat deleniti,
+        nisi nihil laborum quo! Excepturi eius sapiente, cumque hic quis natus consectetur quo at. Voluptatum, vel
+        corrupti.</p> -->
+
+        <!-- submit Event method-8 -->
+        <!-- <form id="myform">
+            <input type="text" name="username" id="username" placeholder="username"><br><br>
+            <input type="submit" value="submit">
+        </form> -->
+
+    <script>
+        // method-1
+        // const eventsdemo=document.getElementById('eventdemo');
+        // function showContent(){
+        //     eventsdemo.innerHTML='Pargraph content';
+        // }
+        // function showContent(){
+        //     document.getElementById('eventdemo').innerHTML=' content'
+        // }
+
+        // method-2
+        // const eventsdemo=document.getElementById('eventdemo');
+        // const btn=document.getElementById('btnevent');
+        // // console.log('event', eventsdemo);
+        // // console.log('btn',btn);
+        // function showContent(){
+        //     eventsdemo.innerHTML='content';
+        // }
+        // btn.addEventListener('click',showContent)
+
+        // method-3
+        const eventsdemo=document.getElementById('eventdemo');
+        const btn=document.getElementById('btnevent');
+
+        btn.addEventListener('click',function showContent() {
+            eventsdemo.innerHTML= 'Paragraph content';
+        })
+
+        // // method-4
+        // const eventsdemo=document.getElementById('eventdemo');
+        // const btn=document.getElementById('btnevent');
+        // btn.addEventListener('click',()=>{
+        //     eventsdemo.innerHTML ='Paragraph content using arrow functions';
+        // })
+
+        // method-5
+        // const para2 = document.getElementById('para2');
+        // const readMore = document.getElementById('readMore');
+        // readMore.addEventListener('click', () => {
+        //     // para2.style.display='block';
+
+        //     if (para2.style.display == 'block') {
+        //         para2.style.display = 'none';
+        //     }
+        //     else {
+        //         para2.style.display = 'block';
+        //     }
+        // })
+
+            // method-6 
+            // const para1=document.getElementById('para1');
+            // // para1.addEventListener('mouseover',()=>{
+            // //     para1.style.backgroundColor='pink';
+            // // })
+            // para1.addEventListener('mouseout',()=>{
+            //     para1.style.backgroundColor='red';
+            //     para1.style.color='white';
+            // })
+
+            // method-7
+            //  para1.addEventListener('dblclick',()=>{
+            //     para1.style.backgroundColor='red';
+            //     para1.style.color='white';
+            // })
+
+            // method-8
+                // document.getElementById('myform').addEventListener('submit', ()=>{
+                //     alert('thnks for submission')
+                // })
+
+                
+    </script>
+</body>
+
+</html>

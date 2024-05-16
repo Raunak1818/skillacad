@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+
+    <style>
+        div {
+            text-align: center;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>What is the capital of France?</h1>
+
+    <div class="answers">
+        <button id="btnCorrect" data-correct="true" onclick="checkAnswer(this)">Paris</button>
+        <button id="btnWrong1" onclick="checkAnswer(this)">Rome</button>
+        <button id="btnWrong2" onclick="checkAnswer(this)">Berlin</button>
+        <button id="btnWrong3" onclick="checkAnswer(this)">London</button>
+    </div>
+
+    <h4 id="displayanswer" style="text-align: center;"></h4>
+
+    <script>
+        function checkAnswer(btn) {
+            if (btn.getAttribute('data-correct')) {
+                btn.style.backgroundColor = 'green';
+                btn.style.color = 'white';
+                document.getElementById('displayanswer').innerHTML = 'Answer is correct';
+            } else {
+                btn.style.backgroundColor = 'red';
+                btn.style.color = 'white';
+                document.getElementById('displayanswer').innerHTML = 'Answer is wrong';
+            }
+
+            // Disable all buttons
+            document.getElementById('btnCorrect').disabled = true;
+            document.getElementById('btnWrong1').disabled = true;
+            document.getElementById('btnWrong2').disabled = true;
+            document.getElementById('btnWrong3').disabled = true;
+        }
+    </script>
+
+</body>
+
+</html>

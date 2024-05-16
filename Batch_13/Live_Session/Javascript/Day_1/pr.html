@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fdbf00;
+}
+.card{
+    width: 640px;
+    height: 400px;
+    /* background-color: red; */
+    position:  absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 1s;
+}
+.card:hover{
+    transform: rotate(-5deg);
+}
+
+.card:hover .back{
+    transform: rotate(0);
+    width: 450px;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    /* transition-duration: 3s; */
+}
+
+.card:hover .outside{
+    transform: rotateY(-130deg);
+}
+.outside,.inside{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+}
+.outside{
+    /* background-color: pink; */
+    z-index: 2;
+    cursor: pointer;
+    transform-origin: left;
+    /* transition: 3s; */
+}
+.inside{
+    background:linear-gradient(to right, #e7e7e7, #ffffff 30%) ;
+    line-height: 2;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* left: 50%; */
+    font-size: 20px;
+    /* transition: 2s; */
+}
+
+.front,.back{
+    height: 100%;
+    width: 100%;
+    transform: rotateX(0deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+
+}
+.front{
+background-color: #fff;
+}
+.back{
+    background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+    transform: rotateY(180deg);
+}
+.front p{
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 30px;
+    text-align: center;
+    color: #000046;
+}
+.cake{
+    width: 100%;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 30px;
+    
+}
+.top_layer,
+.middle_layer,
+.bottom_layer{
+height: 80px;
+width: 240px;
+background-position: 28px 0;
+/* border: 1px solid aqua; */
+background-repeat: repeat;
+background-size: 60px 100px;
+background-image: linear-gradient(transparent 50px, #fedbab 50px, #fedbab 60px, transparent 60px),
+radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+;
+border-radius: 10px 10px  0 0;
+position: relative;
+margin: auto;
+}
+.middle_layer{
+    top: 10px;
+    transform: scale(0.8);
+}
+.top_layer{
+    top: 32px;
+    transform: scale(0.7);
+}
+
+.candle{
+    height: 45px;
+    width: 15px;
+    background-color: rgb(148, 23, 23);
+    background:repeating-linear-gradient(45deg, coral 0px,coral 5px,lightgreen 5px, lightgreen 10px);
+    position: absolute;
+    bottom: 196px;
+    right: 155px;
+}
+
+.candle::before{
+    content: '';
+    position: absolute;
+    bottom: 46px;
+    height: 19px;
+    width: 16px;
+    background-color: rgb(255, 111, 0);
+    border-radius: 0 50% 30% 50%;
+    transform:  rotate(45deg);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="outside">
+            <div class="front">
+                <p>Happy Birthday</p>
+                <div class="cake">
+                    <div class="top_layer"></div>
+                    <div class="middle_layer"></div>
+                    <div class="bottom_layer"></div>
+                    <div class="candle"></div>
+                </div>
+            </div>
+            <div class="back">
+                <!-- <h1>lots of love</h1> -->
+            </div>
+        </div>
+        <div class="inside">
+            <p>Wishing you a warm birthday filled with love and laughter</p>
+            <!-- <h1>🎁</h1> -->
+            <h1>&#127873 <br>🎈🎈🎈 <br>🥳🥳</h1>
+            
+        </div>
+    </div>
+</body>
+</html>

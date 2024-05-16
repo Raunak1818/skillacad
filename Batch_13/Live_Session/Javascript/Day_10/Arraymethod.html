@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array Methods</h1>
+    <script>
+        const cartoons = [['Mickey Mouse', 'Pikachu', 'Doremon'],
+        ['Peppa Pig', 'Popeye', 'Powerpuff Girls'],
+        ['Shinchan', 'Frozen', 'Oggy']];
+        const D2_1=performance.now();
+        for(let i=0;i<cartoons.length;i++){
+            for(let j=0;j<cartoons.length;j++){
+                console.log('cartoons ',cartoons[i][j]+'at index'+i,j);
+            }
+        }
+        const D2_2=performance.now();
+
+        // console.log(cartoons);
+        const newCartoons=cartoons.flat();
+        const D1_1=performance.now();
+
+        for(let i=0;i<newCartoons.length;i++){
+            console.log('cartoons ',newCartoons[i]+'at index '+i);
+        }
+        const D1_2=performance.now();
+        console.log('2 D array time',D2_2-D2_1);
+        console.log('1 D array time',D1_2-D1_1);
+
+
+        // console.log(newCartoons);
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- total time---120 min
+part A-----0 min
+Part B-----67th min
+Part C-----99th min
+
+
+A----66
+B----99-67
+C----120-99 -->

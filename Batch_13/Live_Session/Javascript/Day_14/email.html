@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return emailPattern()">
+        <label for="emailCheck">Enter Email</label>
+        <input type="text" name="" id="emailcheck"><br>
+        <span id="error_msg"></span>
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        function emailPattern(){
+            event.preventDefault();
+            console.log('Email Pattern');
+            var emailCheck=document.getElementById('emailcheck').value;
+            var pattern=/[A-z0-9]@[A-z][.][A-z]/;
+        }
+    </script>
+</body>
+</html>

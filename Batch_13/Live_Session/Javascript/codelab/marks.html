@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+       var marks = 77;
+       var grade;
+     
+       if (marks >= 90) {
+         grade = "A";
+       } else if (marks >= 80 && marks < 90) {
+         grade = "B";
+       } else if (marks >= 70 && marks < 80) {
+         grade = "C";
+       } else if (marks >= 60 && marks < 70) {
+         grade = "D";
+       } else {
+         grade = "fail";
+       }
+    
+       document.getElementById("demo").innerHTML=("Grade: " + grade);
+
+     </script>
+</body>
+</html>

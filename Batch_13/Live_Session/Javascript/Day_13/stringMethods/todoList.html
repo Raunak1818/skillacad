@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <div class="class_form">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+    </div>
+    <ul id="taskList">
+
+    </ul>
+    <script>
+        let tasks=[];
+        function addTask(){
+            const taskInput=document.getElementById('taskInput').value;
+            // console.log(taskInput);
+            const taskText=taskInput.trim();
+        if (taskText!=='') {
+                tasks.push(taskText);
+                console.log('task array',tasks);
+            }
+            else{
+                alert('Please fill the Details');
+            }
+            displayTask();
+        }
+        function displayTask(){
+            const taskList=document.getElementById('taskList');
+            taskList.innerHTML='';
+            for (let i = 0; i <tasks.length; i++) {
+                const taskItem = document.createElement('li');
+                taskItem.textContent=tasks[i];
+                const buttonDelete=document.createElement('button');
+                buttonDelete.textContent='Delete';
+                buttonDelete.onclick=function(){
+                    deleteTask(i);
+                }
+                taskList.appendChild(taskItem);
+                // taskList.appendChild(buttonDelete);
+                taskItem.appendChild(buttonDelete);
+                
+                function deleteTask(i){
+                    tasks.splice(i,1);
+                    displayTask();
+                }
+            }
+        }
+    </script> 
+</body>
+</html>

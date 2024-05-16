@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>events in js</h1>
+    <form>
+    <input id="name" type="text" name="name" placeholder="name" >
+    <input id="email" type="email" name="email" placeholder="email" >
+    <input id="password" type="password" name="password" placeholder="password" >
+    <input id="number" type="number" name="number" placeholder="number" >
+    <button onclick="formdata">submit</button>
+</form>
+<script>
+    function formdata(){
+        var name=document.getElementById('name').value;
+        var email=document.getElementById('email').value;
+        var password=document.getElementById('password').value;
+        var number=document.getElementById('number').value;
+
+        console.log('name',name);
+        console.log('email',email);
+        console.log('password',password);
+        console.log('number',number);
+    }
+</script>
+
+</body>
+</html>

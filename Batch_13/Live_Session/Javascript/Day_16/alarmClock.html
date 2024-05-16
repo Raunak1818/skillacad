@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Alarm Clock</h1>
+    <label for="alarm-time">Set Alarm Time</label>
+    <input type="time" id="alarm-time">
+    <button onclick="setAlarm()">Set Alarm</button>
+
+    <audio id="alarm-sound" src="alarmSound.mp3.wav"></audio>
+</div>
+<script>
+    function setAlarm(){
+        const AlarmTimeInput=document.getElementById('alarm-time');
+        const AlarmSound=document.getElementById('alarm-sound');
+
+        if (AlarmTimeInput.value){
+            const inputTime=AlarmTimeInput.value;
+            const currentTime=new Date();
+
+            const alarmTime=new Date(currentTime.toDateString()+''+inputTime);
+
+            if (alarmTime > currentTime){
+                const timediffrence=alarmTime-currentTime;
+
+                setTimeout(()=>{
+                    alert('Time To Wake Up!');
+                    AlarmSound.play();
+
+                },timediffrence);
+            }
+            else{
+                alert('Please set a future time for a alarm')
+            }
+        }
+    }
+</script>
+</body>
+</html>

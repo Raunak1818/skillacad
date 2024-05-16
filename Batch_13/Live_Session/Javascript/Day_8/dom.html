@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        div,section{
+            margin: 5px ;
+            padding: 10;
+            border: 1px solid lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <!-- <a href="https://www.google.com" target="_blank" id="navLink">Google</a> -->
+    <h1>Accessing Elements in Dom</h1>
+    <h2>ID (#demo)</h2>
+    <div id="demo">Acces me by ID</div>
+
+    <h2>Class (.demo1)</h2>
+    <div class="demo1">Access me by class (1)</div>
+    <div class="demo1">Access me by class (2)</div>
+    
+    <h2>Tag (section)</h2>
+    <section>This is Tag Access by(1)</section>
+    <section>This is Tag Access by(1)</section>
+
+
+    <h2>Query Selector Access</h2>
+    <div class="querySelector1">Access me by id in querySelector1</div>
+    <div class="querySelector2">Access me by id in querySelector2</div>
+    <div class="querySelector3">Access me by id in querySelector3</div>
+
+    <h2>Query SelectorAll Access</h2>
+    <div class="querySelectorAll1">Access me by id in querySelectorAll1</div>
+    <div class="querySelectorAll2">Access me by id in querySelectorAll2(1)</div>
+    <div class="querySelectorAll2">Access me by id in querySelectorAll2(2)</div>
+    
+    <script>
+       
+    </script>
+</body>
+</html>
+
+
+
+// document.getElementById
+// document.getElementsByClassName
+// document.getElementsByTagName
+// document.querySelector
+// document.querySelectorAll
+
+
+
+
+
+
+
+                <!-- for <a href></a> -->
+<!-- let navData=document.getElementById('navLink');
+undefined
+navData
+<a href=​"https:​/​/​www.google.com" target=​"_blank" id=​"navLink">​Google​</a>​
+navData.textContent
+'Google'
+navData.innerHTML
+'Google'
+navData.innerHTML='wikipedia'
+'wikipedia'
+navData.href
+'https://www.google.com/'
+navData.href='https://www.history.com/topics/christmas/history-of-christmas'
+'https://www.history.com/topics/christmas/history-of-christmas' -->
+
+
+
+
+<!-- const demoId=document.getElementById('demo');
+undefined
+demoId.style.border='2px solid red';
+'2px solid red' -->
+
+
+
+<!-- const democlass=document.getElementsByClassName('demo1');
+undefined
+democlass.style.border='2px solid pink';
+VM2362:1 Uncaught TypeError: Cannot set properties of undefined (setting 'border')
+    at <anonymous>:1:23
+(anonymous) @ VM2362:1
+democlass[0].style.border='2px solid pink';
+'2px solid pink'
+for (let i = 0; i < 2; i++) {
+    democlass[i].style.border='2px solid green';
+}
+'2px solid green' -->
+
+
+
+<!-- const demotag=document.getElementsByTagName('section');
+undefined
+demotag
+HTMLCollection(2) [section, section]0: section1: sectionlength: 2[[Prototype]]: HTMLCollection
+for (let i = 0; i < 2; i++) {
+   demotag[i].style.border='2px solid blue'; 
+}
+'2px solid blue' -->

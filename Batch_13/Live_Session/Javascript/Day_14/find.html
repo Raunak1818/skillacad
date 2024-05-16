@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    Search:<input type="text" id="searchInput" oninput="searchText()">
+    <div id="document">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut distinctio soluta a rerum cupiditate nostrum, esse repudiandae explicabo consectetur tenetur fugit pariatur recusandae hic iste reprehenderit voluptas laborum facilis? Itaque fugiat corrupti vel voluptates recusandae voluptatibus corporis expedita molestias, exercitationem eveniet, fuga assumenda impedit, provident aperiam quas reprehenderit dolore ipsa commodi cumque. Unde dolore optio ipsum, aliquid sunt assumenda reiciendis officia vel ut animi ad, natus, expedita incidunt esse voluptatibus quis ab. Tenetur voluptatem distinctio molestiae ad dolorem necessitatibus vel ipsum magni asperiores nisi quisquam magnam quis, explicabo impedit praesentium ullam ea vero tempora nihil ab maxime ex sint. Minus dicta dolore perspiciatis, assumenda mollitia quaerat? Hic suscipit sed cumque quasi repellendus eum, dolore ducimus fuga! Quo iure, labore accusantium error assumenda optio, nostrum iusto tempora quasi laudantium aspernatur dolorum quis? Rem voluptatibus repudiandae rerum tenetur, id incidunt asperiores at beatae enim a debitis, fuga optio autem quasi dolor aliquid ad obcaecati consectetur modi facere alias laborum doloribus officiis. Perferendis esse iste, repudiandae deserunt officia debitis praesentium ex, rerum autem, molestiae odit rem fugiat ad quis. Voluptatum soluta nesciunt culpa esse, consectetur beatae ipsam incidunt dolores qui laudantium consequatur labore obcaecati facilis quod laborum, provident optio, magni blanditiis placeat? Praesentium itaque sed sequi, ea consectetur illum id repellendus fugiat beatae. Reiciendis expedita fugit quam nobis ducimus nihil corporis non perspiciatis quaerat dolores, minus quidem quas aspernatur odit quia amet hic ipsam inventore laborum nesciunt dignissimos sequi quae laboriosam neque? Cum atque architecto sit earum ab, tempora numquam? Nulla eaque dolores delectus libero aperiam odio voluptatum, sapiente accusantium temporibus molestias reiciendis corrupti quo, repudiandae inventore beatae nisi adipisci distinctio! Quo commodi accusantium veritatis itaque nam earum minus perferendis consequuntur voluptatibus, aliquam amet laborum autem qui rerum repudiandae eum aut odio? Veritatis, repudiandae dolor nesciunt optio quaerat expedita sed, animi atque cumque esse delectus hic vero laudantium. Nulla, ratione. Animi itaque beatae voluptate et culpa! Deserunt molestiae ipsum explicabo et neque omnis perspiciatis suscipit, accusantium id veniam praesentium aspernatur numquam ab a dolor voluptatem, saepe error amet reiciendis sunt, nobis sint tenetur possimus. Quisquam voluptates nulla, ab laboriosam tempore quidem quis voluptatum esse, debitis iusto repellat. Ipsum quam rem totam pariatur dignissimos eligendi atque adipisci tempora, excepturi quasi rerum ipsam eum laborum consectetur expedita in neque nulla? Obcaecati dolore asperiores adipisci tempora vitae minus at nisi molestiae ratione suscipit! Suscipit, maiores nostrum at magni eligendi, error enim esse veniam doloribus nobis sapiente.</p>
+        <p>This is my best example.Examples are those where data can be visualize in the best case example</p>
+
+    </div>
+    <script>
+        function searchText(){
+            const searchInput=document.getElementById('searchInput').value;
+            const documentContent=document.getElementById('document');
+            const searchRegex=new RegExp (searchInput,'ig')
+            const text=documentContent.innerHTML;
+            console.log(text,'text');
+            const highlightedText=text.replace(searchRegex,match=>`<span class="highlight">${match}</span>`)
+       documentContent.innerHTML=highlightedText
+        }
+
+
+        // disable ctrl+f default behaviour
+
+        window.addEventListener('keydown',function (event){
+            if((event.ctrlkey ||event.metakey) && event.key==='f'){
+                event.preventDefault();
+                console.log();
+                document.getElementById('searchInput').focus();
+            }
+        })
+
+    </script>
+</body>
+</html>

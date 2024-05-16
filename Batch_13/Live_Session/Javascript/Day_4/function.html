@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript Functions</h1>
+    <p id="show"></p>
+    <script>
+        // example-1
+        //non parameterized functions
+        // function show(){   //function declaration
+        //     document.getElementById('show').innerHTML='Peter';
+        // }
+        // show();//function call
+
+        // //example-2
+        // // parameterized functions
+        // function add(a,b){   //a,b parameters
+        //     document.getElementById('show').innerHTML=a+b;
+        // }
+        // add(3,4);   //3,4 are arguments
+
+
+        //example-3
+        // anonymous function
+        // const display=()=>{
+        //     document.getElementById('show').innerHTML='Arrow Functions';
+        // }
+        // display();
+
+        //example-4
+
+        // const display=(name,age)=>{
+        //     // document.getElementById('show').innerHTML='The name is '+name+' the age is '+age;
+        //     document.getElementById('show').innerHTML=`The name is ${name} and the age is ${age}`;
+
+        // }
+        // display('Peter',99);
+
+        //exampe5
+        // function coffeename(name,size){
+        //     return `the ${name} coffee of ${size} size is ready`;
+        // }
+        // // coffeename('Latte','Medium');
+        // document.getElementById('show').innerHTML=coffeename('Latte','Medium');
+
+        //example-6
+        // function coffeename(name,size){
+        //     return `the ${name} coffee of ${size} size is ready`;
+        // }
+        // // coffeename('Latte','Medium');
+        // document.getElementById('show').innerHTML=coffeename('Latte','Medium');
+
+        //example-7
+        //immediate invoke functions
+        // (function show() {
+        //     console.log('show function');
+        // })();
+        // const a=((a)=>{
+        //     console.log('hello',a);
+        // })(99);
+
+        // example 8
+        // const display=(Empid,name)=>{
+        // let a='2';
+        // console.log('the name is '+ name);
+        // console.log('the empid is ', Empid+12);
+        // console.log(a+2);
+        // console.log(Empid+name);
+        // }
+        // display(121,'Thor');
+
+
+        //example 9
+        // const outer=()=>{
+        //     console.log('outer function');
+        //     const inner=()=>{
+        //         console.log('inner function');
+        //     }
+        //     inner();
+        // }
+        // outer();
+
+        //example 10
+        // const outer=()=>{
+        //     console.log('outer function');
+        //     const inner=()=>{
+        //         console.log('inner function');
+        //     }
+        //    return inner;
+        // }
+        // outer();
+
+        //example 10
+        // const outer=()=>{
+        //     console.log('outer function');
+        //     const inner=()=>{
+        //         console.log('inner function');
+        //     }
+        //    return inner;
+        // }
+        // outer();
+
+        //example 11
+        // const outer = () => {
+        //     console.log('outer function');
+        //     const inner = () => {
+        //         console.log('inner function');
+        //     }
+        //     return inner;
+        // }
+        // outer()();
+        //example 12
+        // let a=99;
+        // function show(a) {
+        //     console.log('hnvbv');
+        //     return a;
+        // }
+        // console.log(a);
+        // console.log(show(9));
+        // show(9);
+
+        // function real(){
+        //     console.log('real function');
+        // }
+        // const notreal=()=>{
+        //     console.log('notreal');
+        // }
+        // console.log(real);
+        // console.log(notreal);
+
+        // example 13
+        const a=()=>{
+            console.log('a');
+            return 8
+        }
+        const z=a;
+        // console.log(z);
+        console.log(z());
+
+
+    </script>
+</body>
+
+</html>

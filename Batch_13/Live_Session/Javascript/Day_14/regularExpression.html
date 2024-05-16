@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regular Expression </h1>
+    <p id="demo"></p>
+    <script>
+        // let text="hello students how are you?"
+        // let regexpression= new RegExp("pattern","flags");
+        // flags==g/i/m 
+
+        // let text="Hello Students";
+        // let pattern=/Student/;
+        // let result=text.match(pattern);
+        // document.getElementById('demo').innerHTML=result;
+
+        // *****************flag/modifiera/attributes*******************
+
+        // --------------i-----------
+        // let text="Hello Students";
+        // let pattern=/Student/i;
+        // let result=text.match(pattern);
+        // document.getElementById('demo').innerHTML=result;
+
+        // ---------------g----------------
+        // let text="Hello Students.How are you students?";
+        // let pattern=/Student/ig;
+        // let result=text.match(pattern);
+        // document.getElementById('demo').innerHTML=result;
+
+
+        // ----------m-----------
+        let text=`Is this 
+        all there
+        is 
+         is`;
+         let pattern=/^is/igm;
+         let result=text.match(pattern);
+         document.getElementById('demo').innerHTML=result;
+
+
+    </script>
+</body>
+</html>

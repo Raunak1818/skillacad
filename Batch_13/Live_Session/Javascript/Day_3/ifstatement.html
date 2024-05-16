@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>If statement in html</h1>
+    <!-- <p id="ifdemo"></p> -->
+    <p id="nestedifdemo"></p>
+    <script>
+        let a=99;
+        let b=119;
+        // console.log(a==9);
+        // if(!(a==6)){
+        //     document.getElementById('ifdemo').innerHTML='it is true'
+        // }
+        // else{
+        //     document.getElementById('ifdemo').innerHTML='it is false'
+        // }
+        if(a<=99 && b<=99){
+document.getElementById('nestedifdemo').innerHTML='Both number are correct'
+        }
+        else if(a<=99 && b>99){
+            document.getElementById('nestedifdemo').innerHTML='B has three digits'
+        }
+        else if(a>99 && b<=99){
+            document.getElementById('nestedifdemo').innerHTML='A has three digits'
+        }
+        else if(a>99 && b>99){
+            document.getElementById('nestedifdemo').innerHTML='A and B have three digits'
+        }
+    </script>
+</body>
+</html>

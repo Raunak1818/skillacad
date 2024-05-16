@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SpreadOperatorObject</h1>
+    <script>
+        const details = {
+            name :'Peter',
+            uid:'48',
+            designation:'spiderMan'
+        }
+        const newDetail1=details;
+        console.log(newDetail1);
+        const detail3={...details };
+        console.log(detail3);
+
+        // function argument
+        function sum(a,b,c){
+            return a+b+c
+        }
+        const numbers=[1,2,3];
+        const result=sum(...numbers);
+        console.log(result);
+    </script>
+</body>
+
+</html>

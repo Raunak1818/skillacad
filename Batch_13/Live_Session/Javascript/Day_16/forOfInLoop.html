@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> For Of Loop For In Loop</h1>
+   <script>
+    const fruits=['apple','Banana','Orange']
+    for (let i = 0;i < fruits.length;i++) {
+        console.log(fruits[i]);      
+    }
+
+    for(const fruit of fruits){
+        console.log('of loop',fruit);
+    }
+
+    for(const fruit in fruits){
+        console.log('in loop',fruits[fruit]);
+    }
+
+
+
+
+    
+    const message='Hello';
+    for (char of message){
+        console.log(char);
+    }
+
+    for(char in message){
+        console.log(message[char]);
+
+    }
+
+
+
+
+
+    const studentdetails = {
+            name :'Peter',
+            uid:'48',
+            designation:'spiderMan'
+        }
+        for(key in studentdetails){
+            console.log(key,studentdetails[key]);
+        }
+   
+
+   </script>
+</body>
+</html>
