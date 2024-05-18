@@ -24,8 +24,8 @@ const courseRecord = new mongoose.model("courseRecord", courseSchema);
 // reactData.save();
 
 
-//async await
-//store single data
+//------------- async await------------
+//-------------- store single data---------
 // const createDocument=async()=>{
 //     try{
 //         const vueData=new courseRecord({
@@ -124,19 +124,22 @@ const courseRecord = new mongoose.model("courseRecord", courseSchema);
 
 //read operations
 // const getDocuments=async()=>{
-//     // const result=await courseRecord.find();
-//     // const result=await courseRecord.find({title:'React JS'});
-//     // const result=await courseRecord.find().select({title:1,_id:0});
-//     // const result=await courseRecord.find({noVideos:{$gt:34}}).select({title:1,_id:0});
-//     // const result=await courseRecord.find({noVideos:{$gt:34}}).select({title:1,_id:0}).sort({title:1});
-//     // const result=await courseRecord.find({noVideos:{$gt:34}}).count();
-//     // const result=await courseRecord.find().limit(3).skip(1);
-//     // const result=await courseRecord.find({title:/react JS/i});
-//     // const minVideo=await courseRecord.find().sort({noVideos:1}).limit(1);
-//     const maxVideo=await courseRecord.find().sort({noVideos:-1}).limit(1);
-//     console.log(maxVideo);
-//     // console.log(minVideo);
-//     // console.log(result);
+    // const result=await courseRecord.find();
+    // const result=await courseRecord.find({title:'React JS'});
+    // const result=await courseRecord.find().select({title:1,_id:0});
+    // const result=await courseRecord.find({noVideos:{$gt:34}});
+    // const result=await courseRecord.find({noVideos:{$gt:34}}).select({title:1,_id:0});
+    // const result=await courseRecord.find({noVideos:{$gt:34}}).select({title:1,_id:0}).sort({title:1});
+    // const result=await courseRecord.find({noVideos:{$gt:34}}).count();
+    // const result=await courseRecord.find().limit(1);
+    // const result=await courseRecord.find().skip(1);
+    // const result=await courseRecord.find().limit(3).skip(1);
+    // const result=await courseRecord.find({title:/react JS/i});
+    // const minVideo=await courseRecord.find().sort({noVideos:1}).limit(1);
+    // const maxVideo=await courseRecord.find().sort({noVideos:-1}).limit(1);
+    // console.log(maxVideo);
+    // console.log(minVideo);
+    // console.log(result);
 // }
 // getDocuments();
 
@@ -154,5 +157,5 @@ const updateDocument=async(_id)=>{
         console.log(e);
     }
 }
-updateDocument('6640c49a2a764ca3321e49fb')
+updateDocument('664868953bc3a2de48b798d9')
 
