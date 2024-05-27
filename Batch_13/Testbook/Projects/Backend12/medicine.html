@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Medicine Data</h1>
+    <table id="medicineTable" border="1">
+        <thead>
+            <tr>
+                <th>Medicine Name</th>
+                <th>Medicine Salt</th>
+                <th>Medicine Mfg</th>
+                <th>Medicine Exp</th>
+                <th>Medicine Usage</th>
+                <th>Medicine Storing_Place</th>
+                <th>Medicine Time_To_Take</th>
+                <th>Medicine Dosage</th>
+                <th>Medicine Side_Effects</th>
+                <th>Medicine Prescription Required</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script>
+        fetch('http://localhost:3300/medicinedata')
+        .then((res)=>res.json())
+        .then((data)=>{console.log(data)
+            const tableBody=document.getElementById('tableBody');
+            data.forEach(medicine=>{
+                const row=document.createElement('tr');
+                row.innerHTML=`
+                <td>${medicine.medicine_name}</td>
+                <td>${medicine.medicine_salt}</td>
+                <td>${medicine.medicine_mfg}</td>
+                <td>${medicine.medicine_expiration}</td>
+                <td>${medicine.medicine_usage}</td>
+                <td>${medicine.medicine_storing_place}</td>
+                <td>${medicine.best_time_to_take_medicine}</td>
+                <td>${medicine.medicine_dosage}</td>
+                <td>${medicine.medicine_side_effects}</td>
+                <td>${medicine.medicine_prescription_required}</td>
+                <td>
+                    <button onclick='editRow(this)'>Edit</button>
+                    <button style="display:none;" onclick='saveRow(this)'>save</button>
+                    <button onclick="deleteRow('${medicine.medicine_name}')">Delete</button>
+                </td>
+                `;
+                tableBody.appendChild(row)
+            })
+        })
+        async function saveRow(button) {
+    const row = button.parentNode.parentNode;
+    console.log(row);
+    const cells = row.querySelectorAll('td:not(:last-child)');
+
+    // Constructing the newData object with keys corresponding to the schema
+    const newData = {
+        medicine_name: cells[0].querySelector('input').value,
+        medicine_salt: cells[1].querySelector('input').value,
+        medicine_mfg: cells[2].querySelector('input').value,
+        medicine_expiration: cells[3].querySelector('input').value,
+        medicine_usage: cells[4].querySelector('input').value,
+        medicine_storing_place: cells[5].querySelector('input').value,
+        best_time_to_take_medicine: cells[6].querySelector('input').value,
+        medicine_dosage: cells[7].querySelector('input').value,
+        medicine_side_effects: cells[8].querySelector('input').value,
+        medicine_prescription_required: cells[9].querySelector('input').value
+    };
+
+    // Update the table to reflect the changes
+    cells.forEach((cell) => {
+        const input = cell.querySelector('input');
+        cell.innerHTML = input.value;
+    });
+
+    // Toggle button visibility
+    const editButton = row.querySelector('button:nth-child(1)');
+    const saveButton = row.querySelector('button:nth-child(2)');
+    editButton.style.display = 'block';
+    saveButton.style.display = 'none';
+
+    console.log('Sending data:', newData);
+
+    try {
+        const response = await fetch(`http://localhost:3300/medicine/${newData.medicine_name}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        console.log('Updated data:', data);
+    } catch (e) {
+        console.error('Error saving data:', e);
+    }
+}
+
+        function editRow(button){
+            console.log('edit button');
+            const row=button.parentNode.parentNode;
+            console.log(row);
+            const cells=row.querySelectorAll('td:not(:last-child)')
+            console.log(cells);
+            cells.forEach(cell=>{
+                const text=cell.innerHTML;
+                cell.innerHTML=`<input type="text" value="${text}">`;
+            })
+           const editbutton=row.querySelector('button:nth-child(1)');
+           const savebutton=row.querySelector('button:nth-child(2)');
+           editbutton.style.display='none';
+           savebutton.style.display='block'
+
+        }
+        const deleteRow=async(name)=>{
+            // e.preventDefault();/medicine/:name
+            try{
+            console.log('delete button');
+            const response=await fetch(`http://localhost:3300/medicine/${name}`,{
+                method:'DELETE'
+            });
+            const data=await response.json();
+            console.log('Medicine Deleted',data);
+            location.reload();
+            }
+            catch(error){
+                console.error('error Deleting medicine',error);
+            }
+
+
+        }
+    </script>
+</body>
+</html>
